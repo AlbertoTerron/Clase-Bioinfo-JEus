@@ -1,0 +1,17 @@
+#para instalar una libreria#
+install.packages("BiocManager")
+
+#Cargar libreria#
+library(BiocManager)
+
+#Instalar una libreria de BiocManager#
+install("sangeranalyseR")
+
+#Cargar libreria#
+library(sangeranalyseR)
+
+#Seleccionar el working directory#
+setwd("C:/Users/y15u5/OneDrive/Escritorio/Secuencias_ATPasa/Placa_TORATP")
+
+my_aligned_contigs <- SangerAlignment(processMethod = "REGEX",
+                                      REGEX_SuffixForward = "*.ab1")
